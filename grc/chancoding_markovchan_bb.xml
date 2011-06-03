@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<block>
+	<name>Binary Markov Channel</name>
+	<key>chancoding_markov_bb</key>
+	<category>Channel Coding</category>
+	<import>import chancoding</import>
+	<make>chancoding.markov_bb($ber, $trans_matrix, $bits_per_byte, $init_state, $seed)</make>
+	<param>
+		<name>Bit error rates</name>
+		<key>ber</key>
+		<value>(1e-6, 1e-2, 0.5)</value>
+		<type>real_vector</type>
+	</param>
+	<param>
+		<name>Transition Matrix</name>
+		<key>trans_matrix</key>
+		<value>(0.9999998, 1e-7, 1e-7,   1e-3, 0.998, 1e-3,   5e-3, 5e-3, 0.99)</value>
+		<type>real_vector</type>
+	</param>
+	<param>
+		<name>Bits Per Byte</name>
+		<key>bits_per_byte</key>
+		<value>1</value>
+		<type>int</type>
+		<option>
+			<name>1</name>
+			<key>1</key>
+		</option>
+		<option>
+			<name>2</name>
+			<key>2</key>
+		</option>
+		<option>
+			<name>3</name>
+			<key>3</key>
+		</option>
+		<option>
+			<name>4</name>
+			<key>4</key>
+		</option>
+		<option>
+			<name>5</name>
+			<key>5</key>
+		</option>
+		<option>
+			<name>6</name>
+			<key>6</key>
+		</option>
+		<option>
+			<name>7</name>
+			<key>7</key>
+		</option>
+		<option>
+			<name>8</name>
+			<key>8</key>
+		</option>
+	</param>
+	<param>
+		<name>Initial State</name>
+		<key>init_state</key>
+		<value>0</value>
+		<type>int</type>
+	</param>
+	<param>
+		<name>Random Seed</name>
+		<key>seed</key>
+		<value>3021</value>
+		<type>int</type>
+	</param>
+	<sink>
+		<name>in</name>
+		<type>byte</type>
+	</sink>
+	<source>
+		<name>out</name>
+		<type>byte</type>
+	</source>
+	<source>
+		<name>out_state</name>
+		<type>int</type>
+		<optional>1</optional>
+	</source>
+</block>
+

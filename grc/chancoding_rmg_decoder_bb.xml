@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<block>
+	<name>RMG Decoder</name>
+	<key>chancoding_rmg_decoder_bb</key>
+	<category>Channel Coding/RM Coding</category>
+	<import>import chancoding</import>
+	<import>from math import floor,log, factorial</import>
+	<make>chancoding.rmg_decoder_bb($m, $num_bits_precoded)</make>
+	<param>
+		<name>Length m</name>
+		<key>m</key>
+		<value>2</value>
+		<type>int</type>
+	</param>
+	<param>
+		<name>Bits to precode</name>
+		<key>num_bits_precoded</key>
+		<value>2</value>
+		<type>int</type>
+	</param>
+	<check> 0 &lt; $m &lt; 13 </check>
+	<check> 0 &lt;= $num_bits_precoded &lt;= floor(log((factorial($m) / 2),2)) </check>
+	<sink>
+		<name>in</name>
+		<type>byte</type>
+	</sink>
+	<source>
+		<name>out</name>
+		<type>byte</type>
+	</source>
+	<doc>
+Reed-Muller Decoder for RMG-encoded codewords (only Golay-sequences)
+(Only the first Bit is used for in-&amp;output)
+
+Note:
+m must be smaller than 13
+If "Number bits to precode" is set to 0, only one Coset will be used
+	</doc>
+</block>

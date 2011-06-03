@@ -1,0 +1,48 @@
+/* -*- c++ -*- */
+
+%include "gnuradio.i"			// the common stuff
+
+%{
+#include "chancoding_bsc_bb.h"
+#include "chancoding_ber_b.h"
+#include "chancoding_industrystd_encoder_bb.h"
+#include "chancoding_markovchan_bb.h"
+#include "chancoding_blockinterleaver_vbb.h"
+#include "chancoding_blockdeinterleaver_vbb.h"
+#include "chancoding_blockinterleaver_bb.h"
+#include "chancoding_blockdeinterleaver_bb.h"
+#include "chancoding_unpacked_to_packed_bvi.h"
+#include "chancoding_packed_to_unpacked_vib.h"
+#include "chancoding_rm_encoder_vii.h"
+#include "chancoding_rm_decoder_vii.h"
+#include "chancoding_rmg_encoder_vii.h"
+#include "chancoding_rmg_decoder_vii.h"
+#include "chancoding_rm_encoder_bb.h"
+#include "chancoding_rm_decoder_bb.h"
+#include "chancoding_rmg_encoder_bb.h"
+#include "chancoding_rmg_decoder_bb.h"
+#include "chancoding_rmg_decoder_sd_fb.h"
+#include "chancoding_rmg_decoder_sd_vfi.h"
+%}
+
+%include "chancoding_ber_b.i"
+%include "chancoding_bsc_bb.i"
+%include "chancoding_industrystd_encoder_bb.i"
+%include "chancoding_markovchan_bb.i"
+%include "chancoding_blockinterleaver_vbb.i"
+%include "chancoding_blockdeinterleaver_vbb.i"
+%include "chancoding_blockinterleaver_bb.i"
+%include "chancoding_blockdeinterleaver_bb.i"
+%include "chancoding_unpacked_to_packed_bvi.i"
+%include "chancoding_packed_to_unpacked_vib.i"
+%include "chancoding_rm_encoder_vii.i"
+%include "chancoding_rm_decoder_vii.i"
+%include "chancoding_rmg_encoder_vii.i"
+%include "chancoding_rmg_decoder_vii.i"
+%include "chancoding_rm_encoder_bb.i"
+%include "chancoding_rm_decoder_bb.i"
+%include "chancoding_rmg_encoder_bb.i"
+%include "chancoding_rmg_decoder_bb.i"
+%include "chancoding_rmg_decoder_sd_fb.i"
+%include "chancoding_rmg_decoder_sd_vfi.i"
+

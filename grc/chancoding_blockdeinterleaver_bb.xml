@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<block>
+	<name>Block Deinterleaver</name>
+	<key>chancoding_blockdeinterleaver_bb</key>
+	<category>Channel Coding</category>
+	<import>import chancoding</import>
+	<make>chancoding.blockdeinterleaver_bb($n_rows, $n_cols, $bits_per_byte)</make>
+	<param>
+		<name>Number of rows</name>
+		<key>n_rows</key>
+		<value>2</value>
+		<type>int</type>
+	</param>
+	<param>
+		<name>Number of columns</name>
+		<key>n_cols</key>
+		<value>10</value>
+		<type>int</type>
+	</param>
+	<param>
+		<name>Bits Per Byte</name>
+		<key>bits_per_byte</key>
+		<value>1</value>
+		<type>int</type>
+		<option>
+			<name>1</name>
+			<key>1</key>
+		</option>
+		<option>
+			<name>2</name>
+			<key>2</key>
+		</option>
+		<option>
+			<name>3</name>
+			<key>3</key>
+		</option>
+		<option>
+			<name>4</name>
+			<key>4</key>
+		</option>
+		<option>
+			<name>5</name>
+			<key>5</key>
+		</option>
+		<option>
+			<name>6</name>
+			<key>6</key>
+		</option>
+		<option>
+			<name>7</name>
+			<key>7</key>
+		</option>
+		<option>
+			<name>8</name>
+			<key>8</key>
+		</option>
+	</param>
+	<sink>
+		<name>in</name>
+		<type>byte</type>
+	</sink>
+	<source>
+		<name>out</name>
+		<type>byte</type>
+	</source>
+</block>
+

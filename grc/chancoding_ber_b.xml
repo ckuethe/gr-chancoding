@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<block>
+	<name>BER counter</name>
+	<key>chancoding_ber_b</key>
+	<category>Channel Coding</category>
+	<import>import chancoding</import>
+	<make>chancoding.ber_b($bits_per_byte)</make>
+	<param>
+		<name>Bits per byte</name>
+		<key>bits_per_byte</key>
+		<value>1</value>
+		<type>int</type>
+		<option>
+			<name>1</name>
+			<key>1</key>
+		</option>
+		<option>
+			<name>2</name>
+			<key>2</key>
+		</option>
+		<option>
+			<name>3</name>
+			<key>3</key>
+		</option>
+		<option>
+			<name>4</name>
+			<key>4</key>
+		</option>
+		<option>
+			<name>5</name>
+			<key>5</key>
+		</option>
+		<option>
+			<name>6</name>
+			<key>6</key>
+		</option>
+		<option>
+			<name>7</name>
+			<key>7</key>
+		</option>
+		<option>
+			<name>8</name>
+			<key>8</key>
+		</option>
+	</param>
+	<sink>
+		<name>in1</name>
+		<type>byte</type>
+	</sink>
+	<sink>
+		<name>in2</name>
+		<type>byte</type>
+	</sink>
+	<source>
+		<name>out</name>
+		<type>float</type>
+		<optional>1</optional>
+	</source>
+</block>

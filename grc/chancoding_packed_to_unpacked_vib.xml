@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<block>
+	<name>Unpack Bits</name>
+	<key>chancoding_packed_to_unpacked_vib</key>
+	<category>Channel Coding/RM Coding</category>
+	<import>import chancoding</import>
+	<import>import math</import>
+	<import>from gnuradio import gr</import>
+	<make>chancoding.packed_to_unpacked_vib($bits_per_vector)</make>
+	<param>
+		<name>Bits per Vector</name>
+		<key>bits_per_vector</key>
+		<value>32</value>
+		<type>int</type>
+	</param>
+	<check>$bits_per_vector &gt; 0 </check>
+	<sink>
+		<name>in</name>
+		<type>int</type>
+		<vlen> math.ceil($bits_per_vector / (gr.sizeof_int * 8.0) )</vlen>
+	</sink>
+	<source>
+		<name>out</name>
+		<type>byte</type>
+	</source>
+	<doc>
+Unpacks Bits from a vector of integers
+(each bit represents one bit of an integer)
+
+Note:
+bits_per_vector must be greater than 0
+	</doc>
+</block>
